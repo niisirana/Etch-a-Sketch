@@ -28,8 +28,12 @@ const button = document.createElement("button");
 button.textContent = "Click";
 button.addEventListener("click", () => {
   grid = prompt("Number of squares? ");
-  removeGrid(container);
-  makeGrid(+grid);
+  if (+grid > 100 || +grid <= 0) {
+    alert("No more than 100 and no less than 0!");
+  } else {
+    removeGrid(container);
+    makeGrid(+grid);
+  }
 });
 
 body.prepend(button);
