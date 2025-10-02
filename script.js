@@ -28,7 +28,7 @@ const button = document.createElement("button");
 button.textContent = "Click";
 button.addEventListener("click", () => {
   grid = prompt("Number of squares? ");
-  if (+grid > 100 || +grid <= 0) {
+  if (+grid > 100 || +grid <= 0 || isNaN(grid)) {
     alert("No more than 100 and no less than 0!");
   } else {
     removeGrid(container);
